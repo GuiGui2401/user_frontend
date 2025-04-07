@@ -28,7 +28,10 @@ export async function getStaticProps(ctx) {
   const lang = cookies?.language_locale;
 
   try {
-    const res = await axiosService.get(`/rest/referral`, { lang });
+    const res = await axiosService.get(`/rest/referral`, {
+      params: { lang },
+    });
+    ;
     const data = await res.data.data;
 
     return {
