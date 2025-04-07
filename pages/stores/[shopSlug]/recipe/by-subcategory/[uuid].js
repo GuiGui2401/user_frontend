@@ -50,7 +50,7 @@ export async function getServerSideProps(ctx) {
     return {
       props: {
         data: {},
-        error: error,
+        error: error?.message || "Une erreur est survenue",
       },
     };
   }

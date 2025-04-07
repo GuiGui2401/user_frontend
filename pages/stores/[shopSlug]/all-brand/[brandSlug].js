@@ -140,7 +140,7 @@ export async function getServerSideProps(ctx) {
       props: {
         brand: {},
         products: {},
-        error: error,
+        error: error?.message || "Une erreur est survenue",
       },
     };
   }

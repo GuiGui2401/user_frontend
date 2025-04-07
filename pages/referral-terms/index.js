@@ -41,7 +41,7 @@ export async function getStaticProps(ctx) {
     return {
       props: {
         data: {},
-        error: error,
+        error: error?.message || "Une erreur est survenue",
       },
     };
   }

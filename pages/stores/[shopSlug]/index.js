@@ -237,7 +237,7 @@ export async function getServerSideProps(ctx) {
     return {
       props: {
         storeDetail: {},
-        error: error,
+        error: error?.message || "Une erreur est survenue",
       },
     };
   }
